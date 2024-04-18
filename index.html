@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0">
+    <!-- TITLE & FAVICON -->
+    <link rel="icon" href="assets/img/favicon.png">
+    <title>Vote4CC</title>
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com"
+      crossorigin="">
+    <link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet">
+    <!-- TAILWIND CSS -->
+    <link href="assets/css/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendor/wowJS/animate.css">
+  </head>
+  <body>
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="fixed inset-0 w-screen h-screen
+      bg-black/30 backdrop-blur-sm z-[999] opacity-0 invisible
+      sl-animation-fade"> <button onclick="sidebarToggle(false)"
+        class="absolute top-3 left-2 w-7 h-7 leading-8 bg-violet-950
+        rounded-full"><svg class="w-3 mx-auto fill-white
+          hover:fill-amber-400" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 384 512">
+          <path d="M342.6 150.6c12.5-12.5 12.5-32.8
+            0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6
+            105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7
+            256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3
+            0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8
+            0-45.3L237.3 256 342.6 150.6z"></path> </svg></button>
+      <ul id="sidenav" class="absolute top-0 right-0 h-full w-[320px]
+        max-w-[85vw] bg-violet-950 font-semibold text-base text-ellipsis
+        text-nowrap p-5 translate-x-[400px] sl-animation">
+        <li><a onclick="sidebarToggle(false)" href="#home" class="block
+            w-full py-2.5 hover:text-amber-400 sl-animation">Home</a></li>
+        <li><a onclick="sidebarToggle(false)" href="#about" class="block
+            w-full py-2.5 hover:text-amber-400 sl-animation">About CC</a></li>
+        <li><a onclick="sidebarToggle(false)" href="#message"
+            class="block w-full py-2.5 hover:text-amber-400
+            sl-animation">CC’s message</a></li>
+        <li><a onclick="sidebarToggle(false)" href="#vision"
+            class="block w-full py-2.5 hover:text-amber-400
+            sl-animation">Vision</a></li>
+        <li><a onclick="sidebarToggle(false)" href="#achieve"
+            class="block w-full py-2.5 hover:text-amber-400
+            sl-animation">Achieve </a></li>
+        <li><a onclick="sidebarToggle(false)" href="#contact"
+            class="block w-full py-2.5 hover:text-amber-400
+            sl-animation">Contact Us</a></li>
+      </ul>
+    </aside>
+    <!-- SIDEBAR -->
+    <!-- HEADER -->
+    <nav class="fixed top-0 flex justify-between items-center w-full
+      border-b border-black/15 bg-violet-950/30 z-50 backdrop-blur-sm">
+      <h1 class="font-bold px-6">Vote4<span class="text-amber-400">CC.com</span></h1>
+      <ul class="lg:flex hidden font-semibold text-sm text-ellipsis
+        text-nowrap">
+        <li><a href="#home" class="py-3 px-5 hover:text-amber-400
+            sl-animation">Home</a></li>
+        <li><a href="#about" class="py-3 px-5 hover:text-amber-400
+            sl-animation">About CC</a></li>
+        <li><a href="#message" class="py-3 px-5 hover:text-amber-400
+            sl-animation">CC’s message</a></li>
+        <li><a href="#vision" class="py-3 px-5 hover:text-amber-400
+            sl-animation">Vision</a></li>
+        <li><a href="#achieve" class="py-3 px-5 hover:text-amber-400
+            sl-animation">Achieve </a></li>
+        <li><a href="#contact" class="py-3 px-5 hover:text-amber-400
+            sl-animation">Contact Us</a></li>
+      </ul>
+      <button onclick="sidebarToggle(true)" class="lg:hidden">
+        <svg class="w-8 fill-white p-2 hover:fill-amber-400"
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32
+            32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7
+            14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32
+            32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32
+            32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3
+            32 32z"></path> </svg> </button> </nav>
+    <!-- HEADER -->
+    <!-- HERO -->
+    <section id="home" class="bg-cover bg-fixed bg-no-repeat md:py-40
+      sm:py-28 py-20" style="background-image:
+      url(assets/img/banner.jpg);">
+      <div class="absolute inset-0 w-full h-full bg-violet-950/70"></div>
+      <div class="relative sl-container z-10">
+        <h1 class="wow fadeIn xl:text-5xl text-3xl font-semibold
+          md:mb-12 mb-9"> <span class="md:block md:pb-6 pb-2">Welcome
+            to</span> <span class="md:block md:pb-6 pb-2">The official
+            campaign page for</span> <span class="block md:pb-6 py-2
+            font-bold text-amber-400">Christina Calugcugan “CC”,</span>
+          <span class="md:block md:pb-6 pb-2">Candidate for SEIU Local
+            1000 President.</span> </h1>
+      </div>
+    </section>
+    <!-- HERO -->
+    <!-- ABOUT -->
+    <section id="about" class="bg-violet-950 md:py-20 py-10">
+      <div class="sl-container lg:space-y-9 sm:space-y-6 space-y-4">
+        <h2 class="wow fadeIn md:text-5xl text-2xl font-bold"><span
+            class="text-amber-400">About</span> Christina Calugcugan</h2>
+        <p class="wow fadeInUp">“CC” has been a CA State Worker with the
+          Employment Development Department for over 15 years and is
+          currently serving as the Vice President of DLC 724, a delegate
+          of the Los Angeles Labor Fed and is also a Regional Vice
+          President for the Asian Pacific Islander Caucus with the SEIU
+          International Union and brings years of experience and
+          dedication to the labor movement.</p>
+        <p class="wow fadeInUp">With a passion for advocating for
+          workers' rights and improving the lives of SEIU members, CC
+          has organized and helped unionize health care workers in San
+          Diego, the State Bar workers at Local 1000 and also helped
+          Virginia Government workers unionize.</p>
+        <p class="wow fadeInUp">CC is strong woman of faith and is an
+          active volunteer in her church and in her community. CC grew
+          up in a union household. Her mother was a Local 1000 member
+          and retired from State service after 36 years. Her father is a
+          UFCW retiree and her husband, Terry of 22 years is a proud,
+          SMWIA, Local 105 HVAC worker. CC is blessed with 3 children,
+          Kathleen, Terrell &amp; TJ and is committed to leading Local
+          1000 with integrity, transparency, and inclusivity.<br>
+        </p>
+        <table width="1176" height="193" cellspacing="2" cellpadding="2"
+          border="1">
+          <tbody>
+            <tr>
+              <td valign="top"><img moz-do-not-send="true"
+                  src="assets/img/Confirmation.jpg" alt="" width="584"
+                  height="377"><br>
+              </td>
+              <td valign="top"><br>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top"><br>
+              </td>
+              <td valign="top"><br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="wow fadeInUp"><br>
+        </p>
+      </div>
+    </section>
+    <!-- ABOUT -->
+    <!-- MESSAGE -->
+    <section id="message" class="bg-amber-400
+      text-voilet-950bg-violet-950 md:py-20 py-10">
+      <div class="sl-container">
+        <div class="flex flex-wrap">
+          <div class="wow fadeInLeft lg:w-2/5 md:w-1/2 w-full"> <img
+              src="assets/img/cc.jpg" alt="" class="h-full w-full
+              object-cover"> </div>
+          <div class="wow fadeInRight lg:w-3/5 md:w-1/2 w-full lg:pl-10
+            md:pl-6 md:mt-0 mt-6">
+            <h2 class="md:text-5xl text-2xl font-bold lg:mb-8 sm:mb-5
+              mb-3"><span class="text-violet-950">CC’s</span> Message</h2>
+            <p class="lg:ml-16 sm:ml-6 ml-3">"I am running for President
+              of Local 1000 to represent members from every sector and
+              every geographic area of our Union. After years of being a
+              member and a leader in our union, I have witnessed
+              first-hand the power of our members to win better
+              contracts and better working conditions for everyone in
+              the public sector industry. That's why I believe that it
+              is only through an educated and organized rank and file
+              membership that we can speak with a powerful voice at the
+              bargaining table and at the capitol. I am ready to do the
+              hard work of a no-nonsense Union leadership and committed
+              to working with you to build an even stronger Union. I
+              humbly ask for your vote and support to bring Unity &amp;
+              Progress in our Union".</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- MESSAGE -->
+    <!-- VISION -->
+    <section id="vision" class="bg-violet-950 md:py-20 py-10">
+      <div class="sl-container text-center">
+        <h2 class="wow fadeIn md:text-5xl text-2xl font-bold lg:mb-8
+          sm:mb-5 mb-3">Vision for <span class="text-amber-400">SEIU</span></h2>
+        <p class="wow fadeInDown">My Vision for SEIU Local 1000 is to
+          strengthen our membership and identify and develop quality
+          leaders that will help sustain our local for the years to
+          come. To implement structures and programs that will develop
+          our member leaders and educate all our members on our
+          contract. Where we have the training and education needed to
+          enforce and exercise our rights, where we as CA State Workers
+          have livable wages and the power where the State takes care of
+          the workers that care and provide services to all
+          Californians.</p>
+        <table width="1176" height="164" cellspacing="2" cellpadding="2"
+          border="1">
+          <tbody>
+            <tr>
+              <td valign="top"><br>
+              </td>
+              <td valign="top"><br>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top"><img moz-do-not-send="true"
+                  src="assets/img/AsianHeritage.jpg" alt="" width="1024"
+                  height="768"><br>
+              </td>
+              <td valign="top"><br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <!-- VISION -->
+    <!-- ACHIEVE -->
+    <section id="achieve" class="bg-amber-400
+      text-voilet-950bg-violet-950 md:py-20 py-10">
+      <div class="sl-container">
+        <h2 class="wow fadeIn md:text-5xl text-2xl font-bold lg:mb-8
+          sm:mb-5 mb-3">We will <span class="text-violet-950">achieve</span>
+          this by</h2>
+        <ul class="wow fadeInLeft md:space-y-4 space-y-2
+          fill-violet-950">
+          <li class="flex items-center">
+            <svg class="w-4 mr-4" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512">
+              <path d="M438.6 278.6c12.5-12.5 12.5-32.8
+                0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0
+                45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32
+                32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8
+                12.5 45.3 0l160-160z"></path> </svg> Strengthening
+            union solidarity and member engagement </li>
+          <li class="flex items-center md:pl-3">
+            <svg class="w-4 mr-4" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512">
+              <path d="M438.6 278.6c12.5-12.5 12.5-32.8
+                0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0
+                45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32
+                32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8
+                12.5 45.3 0l160-160z"></path> </svg> Fighting for
+            livable wages, benefits, and working conditions for all SEIU
+            members </li>
+          <li class="flex items-center md:pl-6">
+            <svg class="w-4 mr-4" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512">
+              <path d="M438.6 278.6c12.5-12.5 12.5-32.8
+                0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0
+                45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32
+                32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8
+                12.5 45.3 0l160-160z"></path> </svg> Advance diversity,
+            equity, and inclusion within the union and in the workplace
+          </li>
+          <li class="flex items-center md:pl-9">
+            <svg class="w-4 mr-4" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512">
+              <path d="M438.6 278.6c12.5-12.5 12.5-32.8
+                0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0
+                45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32
+                32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8
+                12.5 45.3 0l160-160z"></path> </svg> Champion
+            legislative and policy initiatives that support workers'
+            rights </li>
+          <li class="flex items-center md:pl-12">
+            <svg class="w-4 mr-4" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512">
+              <path d="M438.6 278.6c12.5-12.5 12.5-32.8
+                0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0
+                45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32
+                32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8
+                12.5 45.3 0l160-160z"></path> </svg> Promote union
+            growth and empower SEIU locals to thrive </li>
+        </ul>
+        <table width="1176" height="136" cellspacing="2" cellpadding="2"
+          border="1">
+          <tbody>
+            <tr>
+              <td valign="top"><br>
+              </td>
+              <td valign="top"><br>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top"><br>
+              </td>
+              <td valign="top"><br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <img moz-do-not-send="true"
+          src="assets/img/VirginiaRichmond.jpg" alt="virginia"
+          width="1290" height="1000">
+        <ul class="wow fadeInLeft md:space-y-4 space-y-2
+          fill-violet-950">
+        </ul>
+        <p class="wow fadeInUp text-center bg-violet-950 text-amber-400
+          sm:py-6 sm:px-12 px-6 py-4 max-w-3xl mx-auto lg:mt-20 sm:mt-14
+          mt-9">Join the movement to elect Christina Calugcugan as SEIU
+          President<br>
+        </p>
+        <table width="100%" cellspacing="2" cellpadding="2" border="1">
+          <tbody>
+            <tr>
+              <td valign="top"><br>
+                <br>
+              </td>
+              <td valign="top"><br>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top"><br>
+              </td>
+              <td valign="top"><br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <!-- ACHIEVE -->
+    <!-- CONTACT -->
+    <section id="contact" class="bg-violet-950 md:pt-10 pt-5">
+      <div class="sl-container">
+        <div class="flex flex-wrap">
+          <div class="wow fadeInLeft lg:w-2/5 md:w-1/2 w-full"> <img
+              src="assets/img/contact.jpg" alt="" class="h-full w-full
+              object-cover"> </div>
+          <div class="wow fadeInRight lg:w-3/5 md:w-1/2 w-full lg:pl-10
+            md:pl-5 md:py-20 py-10">
+            <h2 class="md:text-5xl text-2xl font-bold lg:mb-8 sm:mb-5
+              mb-3">Contact <span class="text-amber-400">Us</span></h2>
+            <p class="lg:mb-8 sm:mb-5 mb-3">Join Christina Calugcugan in
+              the fight for a stronger, more inclusive SEIU that works
+              for all its members. Together, we can make a difference! </p>
+            <p class="lg:mb-8 sm:mb-5 mb-3">Help support the campaign<br>
+            </p>
+            <div class="gmail_default">Zelle: Christina Calugcugan (818)
+              919-3770<br>
+              Venmo: @CC4Pres<br>
+              Follow CC on IG @cclocal1000<br>
+            </div>
+            <div class="gmail_default"><br style="color: rgb(34, 34,
+                34); font-family: Arial, Helvetica, sans-serif;
+                font-size: small; font-style: normal;
+                font-variant-ligatures: normal; font-variant-caps:
+                normal; font-weight: 400; letter-spacing: normal;
+                orphans: 2; text-align: start; text-indent: 0px;
+                text-transform: none; widows: 2; word-spacing: 0px;
+                -webkit-text-stroke-width: 0px; white-space: normal;
+                background-color: rgb(255, 255, 255);
+                text-decoration-thickness: initial;
+                text-decoration-style: initial; text-decoration-color:
+                initial;">
+            </div>
+            <p><br>
+            </p>
+            <p>Commit to standing and supporting CC: <font size="-1">https://docs.google.com/forms/d/1M1id0qVqURj3EG2kd_6x4EzBpLhpOWsKGDUHZflRZ7E/edit?ts=661f2944</font><br>
+            </p>
+            <p>Contact us at <a class="text-amber-400"
+                href="mailto:info@vote4cc.com">info@vote4cc.com</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CONTACT -->
+    <!-- SCRIPT -->
+    <script src="assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/vendor/wowJS/wow.min.js"></script>
+    <script>
+          // WOW JS ANIMATION ADDED
+          new WOW().init(); </script>
+  </body>
+</html>
